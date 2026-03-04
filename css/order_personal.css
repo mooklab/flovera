@@ -1,0 +1,109 @@
+@charset "UTF-8";
+section.order_personal {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+@media (max-width: 960px) {
+  section.order_personal {
+    padding-bottom: 80px;
+  }
+}
+section.order_personal div.container {
+  display: grid;
+  grid-gap: 40px;
+}
+section.order_personal h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #171614;
+}
+section.order_personal form {
+  display: grid;
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 640px;
+}
+section.order_personal form fieldset.text {
+  position: relative;
+}
+section.order_personal form fieldset.text input {
+  padding: 20px;
+  border-bottom: 1px solid #636363;
+  width: 100%;
+}
+section.order_personal form fieldset.text input:not(:-moz-placeholder) + label {
+  top: 0;
+  transform: translateX(0);
+  font-size: 10px;
+}
+section.order_personal form fieldset.text input:not(:-ms-input-placeholder) + label {
+  top: 0;
+  -ms-transform: translateX(0);
+      transform: translateX(0);
+  font-size: 10px;
+}
+section.order_personal form fieldset.text input:focus + label, section.order_personal form fieldset.text input:not(:placeholder-shown) + label {
+  top: 0;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  font-size: 10px;
+}
+section.order_personal form fieldset.text input[required] + label::after {
+  content: " *";
+  color: red;
+}
+section.order_personal form fieldset.text label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0.7;
+  pointer-events: none;
+}
+section.order_personal form div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+section.order_personal form div.buttons button.border {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border: 1px solid #636363;
+  padding: 20px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #636363;
+}
+section.order_personal form div.buttons a.button {
+  cursor: pointer;
+  padding: 20px 30px;
+  background: #171614;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e7e7e7;
+  width: 100%;
+  text-align: center;
+}
+section.order_personal form:invalid div.buttons a.button {
+  pointer-events: none;
+  background: #e7e7e7;
+  color: #636363;
+  opacity: 0.5;
+}/*# sourceMappingURL=order_personal.css.map */

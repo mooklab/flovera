@@ -1,0 +1,37 @@
+mixin product(image, title)
+    a(href="").product
+        div.image
+            img(src=image, alt=title)
+        h3= title 
+        span.price 800 ₽
+
+section.recommendations
+    div.container
+        h2 Персональные рекомендации
+
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +product('images/1.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/2.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/3.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/4.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/5.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/6.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/1.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/2.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/3.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/4.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/5.webp', 'Мицеллярная вода CLEANSING WATER')
+                div.swiper-slide
+                    +product('images/6.webp', 'Мицеллярная вода CLEANSING WATER')

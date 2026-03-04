@@ -1,0 +1,229 @@
+@use '../common/sass/_colors' as *
+@use '../common/sass/_mixins' as *
+    
+section.cart
+    padding-top: 60px
+    padding-bottom: 100px
+    +s(m)
+        padding-bottom: 80px
+
+    div.container
+        display: grid
+        grid-gap: 40px
+
+    h1 
+        font-weight: 500
+        font-size: 32px
+        line-height: 140%
+        text-transform: uppercase
+        color: $color-gray-dark
+
+    div.note
+        border: 1px solid $color-border
+        padding: 30px
+        font-weight: 500
+        font-size: 16px
+        line-height: 140%
+        color: #ff383c
+        +s(m)
+            padding: 20px
+
+    div.products
+        display: grid
+        grid-gap: 30px
+
+    div.product
+        display: grid
+        grid-template-columns: 200px 1fr 1fr
+        grid-gap: 40px
+        border-bottom: 1px solid $color-border
+        +s(m)
+            grid-template-columns: repeat(2, 1fr)
+        +s(s)
+            grid-template-columns: 1fr
+            grid-gap: 30px
+        div.image
+            +s(m)
+                grid-row: 2 span
+            +s(s)
+                grid-row: 1 span
+            img
+                border: 1px solid $color-border
+                width: 200px
+                height: 200px
+                object-fit: cover
+        div.details
+            display: grid
+            align-content: start
+            grid-gap: 20px
+            padding-right: 30px
+            border-right: 1px solid $color-border
+            height: 100%
+            +s(m)
+                border-right: unset
+
+            span.article
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-dark
+                b
+                    font-weight: 500
+            h3
+                font-weight: 500
+                font-size: 20px
+                line-height: 140%
+                text-transform: uppercase
+                color: $color-gray-dark
+
+            div.delete
+                cursor: pointer
+                display: grid
+                grid-template-columns: repeat(2, max-content)
+                align-items: center
+                grid-gap: 10px
+
+        div.prices
+            display: grid
+            align-content: start
+            grid-gap: 20px
+            padding-right: 30px
+            border-right: 1px solid $color-border
+            +s(m)
+                border-right: unset
+                padding-bottom: 40px
+                padding-right: unset
+            div.quantity
+                user-select: none
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 40px max-content
+
+                div.plus, div.minus
+                    cursor: pointer
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    width: 30px
+                    height: 30px
+                    border: 1px solid $color-border
+
+                input
+                    text-align: center
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-outer-spin-button
+                        appearance: none
+                        margin: 0
+            div.row
+                display: grid
+                grid-template-columns: 1fr max-content
+                grid-gap: 10px
+                span:first-child
+                    display: grid
+                    align-items: end
+                    grid-template-columns: max-content 1fr
+                    grid-gap: 10px
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 140%
+                    color: $color-gray-dark
+                    &::after
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 1px
+                        background: $color-border
+
+                span:last-child
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 140%
+                    color: $color-gray-light
+
+                &:has(div.quantity)
+                    span:first-child::after
+                        display: none
+
+    div.promo
+        display: grid
+        justify-content: center
+        grid-template-columns: 420px max-content
+        grid-gap: 10px
+        +s(m)
+            grid-template-columns: 1fr max-content
+        +s(xs)
+            grid-template-columns: 1fr
+
+        input
+            border-bottom: 1px solid $color-gray-light
+            padding: 20px
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: $color-gray-dark
+            min-width: 0
+            &::placeholder
+                opacity: 0.7
+
+        button
+            cursor: pointer
+            padding: 20px 30px
+            background: $color-gray-dark
+            font-weight: 500
+            font-size: 16px
+            line-height: 140%
+            color: $color-border
+
+    div.total
+        display: flex
+        justify-content: center
+        gap: 40px
+        +s(m)
+            flex-direction: column
+            align-items: center
+            grid-gap: 30px
+        div.price
+            display: flex
+            align-items: center
+            gap: 20px
+            span:first-child
+                font-weight: 400
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-light
+            span:last-child
+                font-weight: 500
+                font-size: 25px
+                line-height: 140%
+                color: $color-gray-dark
+                
+        div.buttons
+            display: flex
+            gap: 10px
+            +s(m)
+                width: 100%
+            button.border
+                cursor: pointer
+                display: flex
+                align-items: center
+                gap: 10px
+                border: 1px solid $color-gray-light
+                padding: 20px 30px
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-light
+            a.button
+                cursor: pointer
+                padding: 20px 30px
+                background: $color-gray-dark
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-border
+                min-width: 480px
+                text-align: center
+                +s(m)
+                    min-width: unset
+                    width: 100%
+
+

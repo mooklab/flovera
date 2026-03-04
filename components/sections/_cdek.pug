@@ -1,0 +1,27 @@
+include ../common/pug/_mixins.pug
+
+section.cdek
+    div.container
+
+        div.steps.mobile
+            span Шаг 3
+            span.active Адрес получения
+
+        div.steps.desktop
+            a(href="order_personal.html") Личные данные
+            img(src="images/steps_arrow.svg")
+            a(href="order_personal.html") Способ доставки
+            img(src="images/steps_arrow.svg")
+            span.active Адрес получения
+            img(src="images/steps_arrow.svg")
+            span Оплата
+
+        h1 Выберите ПВЗ CDEK
+
+        div.module Место для модуля интеграции CDEK
+
+        div.buttons
+            button(onclick="history.back()").border
+                img(src="../../images/back_arrow.svg")
+                span Назад
+            a.button Далее

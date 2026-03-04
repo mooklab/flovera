@@ -1,0 +1,124 @@
+@use '../common/sass/_colors' as *
+@use '../common/sass/_mixins' as *
+
+section.order_delivery
+    padding-top: 60px
+    padding-bottom: 100px
+    +s(m)
+        padding-bottom: 80px
+
+    div.container
+        display: grid
+        grid-gap: 40px
+
+    h1 
+        font-weight: 500
+        font-size: 32px
+        line-height: 140%
+        text-transform: uppercase
+        color: $color-gray-dark
+
+    div.note
+        border: 1px solid $color-border
+        padding: 30px
+        font-weight: 500
+        font-size: 16px
+        line-height: 140%
+        color: #ff383c
+
+    form
+        display: grid
+        grid-gap: 20px
+
+        div.row
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 40px
+            +s(l)
+                grid-gap: 20px
+            +s(m)
+                grid-template-columns: 1fr
+        
+        label.radio
+            cursor: pointer
+            display: grid
+            grid-template-columns: max-content 1fr max-content
+            grid-gap: 10px
+            border: 1px solid $color-border
+            padding: 30px
+            height: 180px
+            +s(m)
+                padding: 20px
+                height: 140px
+
+            input
+                margin-top: 2px
+                width: 16px
+                height: 16px
+                border-radius: 8px
+                border: 1px solid $color-gray-light
+                background: white
+                pointer-events: none
+
+            &:has(input:checked)
+                background: $color-gray-dark
+                span.name, span.price
+                    color: white
+
+            span.name
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-dark
+
+            span.price
+                color: $color-gray-light
+                padding-left: 20px
+
+        div.buttons
+            display: flex
+            gap: 10px
+            margin-top: 40px
+
+            button.border
+                cursor: pointer
+                display: flex
+                align-items: center
+                gap: 10px
+                border: 1px solid $color-gray-light
+                padding: 20px 30px
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-light
+
+            a.button
+                cursor: pointer
+                padding: 20px 30px
+                background: $color-gray-dark
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-border
+                width: 100%
+                max-width: 480px
+                text-align: center
+
+        &:invalid
+            div.buttons
+                a.button
+                    pointer-events: none
+                    background: $color-border
+                    color: $color-gray-light
+                    opacity: 0.5
+
+
+
+
+
+
+
+
+
+
+

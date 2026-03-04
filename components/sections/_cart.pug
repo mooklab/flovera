@@ -1,0 +1,53 @@
+mixin product(image, title)
+    div.product
+        div.image
+            img(src=image, alt=title)
+        div.details
+            span.article #[b Артикул:] МВ000001
+            a(href=""): h3= title
+            div.delete
+                img(src="images/cart_cross.svg")
+                span Удалить
+        div.prices
+            div.row
+                span Кол-во:
+                div.quantity
+                    div.minus
+                        include ../../images/quantity_minus.svg
+                    input(type="number", min="1", max="9")
+                    div.plus
+                        include ../../images/quantity_plus.svg
+            div.row
+                span Цена
+                span 800 ₽
+                
+            div.row
+                span Сумма
+                span 800 ₽
+
+section.cart
+    div.container
+        h1 Ваша корзина
+        div.note.red Минимальная сумма заказа - 1200 ₽
+        div.products
+            +product('images/1.webp', 'Мицеллярная вода CLEANSING WATER')
+            +product('images/2.webp', 'Мицеллярная вода CLEANSING WATER2')
+            +product('images/3.webp', 'Мицеллярная вода CLEANSING WATER3')
+        div.promo
+            input(type="text", placeholder="Введите промокод")
+            button Применить
+        div.total
+            div.price
+                span Сумма к оплате итого:
+                span 3 200 ₽
+            div.buttons
+                button(onclick="history.back()").border
+                    img(src="../../images/back_arrow.svg")
+                    span Назад
+                a(href="order_personal.html").button Далее
+
+
+
+
+
+

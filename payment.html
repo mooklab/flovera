@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height">
+        <meta name="description" content="Описание сайта">
+        <meta name="keywords" content="Ключевые слова">
+        <title>Корзина и Оформление</title>
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="application-name" content="Корзина и Оформление">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Корзина и Оформление">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Описание сайта">
+        <meta property="og:image" content="Изображение">
+        <meta property="og:site_name" content="Корзина и Оформление">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/payment.css">
+        <script defer src="scripts/main.js" type="module"></script>
+    </head>
+    <body>
+        <main>
+            <section class="payment">
+                <div class="container">
+                    <div class="steps mobile"><span>Шаг 4</span><span class="active">Оплата</span></div>
+                    <div class="steps desktop"><a href="order_personal.html">Личные данные</a><img src="images/steps_arrow.svg"><a href="order_personal.html">Способ доставки</a><img src="images/steps_arrow.svg"><a href="order_personal.html">Адрес получения</a><img src="images/steps_arrow.svg"><span class="active">Оплата</span></div>
+                    <h1>Оплата</h1>
+                    <div class="data">
+                        <div class="personal">
+                            <h3>Данные пользователя</h3>
+                            <div class="list">
+                                <div class="row"><span>ФИО</span><span>Иванова Евгения Михайловна</span></div>
+                                <div class="row"><span>Телефон</span><span>8 999 210 27 37</span></div>
+                                <div class="row"><span>Email</span><span>ivanova.evgeniya@gmail.com</span></div>
+                            </div>
+                        </div>
+                        <div class="delivery">
+                            <h3>Данные доставки</h3>
+                            <div class="list">
+                                <div class="row"><span>Служба доставки</span><span>СДЭК (курьером)</span></div>
+                                <div class="row"><span>Адрес</span><span>Москва, ул. Строителей, д. 12/1, кв. 158</span></div>
+                            </div>
+                        </div>
+                        <div class="products">
+                            <h3>Товары в заказе</h3><a class="product" href="">
+                                            <div class="image"><img src="images/1.webp" alt="Мицеллярная вода CLEANSING WATER"></div>
+                                            <div class="about">
+                                                <h3>Мицеллярная вода CLEANSING WATER</h3>
+                                                <div class="details">
+                                                    <div><strong>Кол-во:</strong><span>1</span></div>
+                                                    <div><strong>Цена</strong><span>800 ₽</span></div>
+                                                    <div><strong>Сумма</strong><span>800 ₽</span></div>
+                                                </div>
+                                            </div></a><a class="product" href="">
+                                            <div class="image"><img src="images/2.webp" alt="Палетка теней EYE SHADOW QUAD 03 Nude Dip OPEN*STAGE"></div>
+                                            <div class="about">
+                                                <h3>Палетка теней EYE SHADOW QUAD 03 Nude Dip OPEN*STAGE</h3>
+                                                <div class="details">
+                                                    <div><strong>Кол-во:</strong><span>1</span></div>
+                                                    <div><strong>Цена</strong><span>800 ₽</span></div>
+                                                    <div><strong>Сумма</strong><span>800 ₽</span></div>
+                                                </div>
+                                            </div></a><a class="product" href="">
+                                            <div class="image"><img src="images/3.webp" alt="Палетка для контуринга CONTOUR PALETTE оттенок 001 UNIVERSAL"></div>
+                                            <div class="about">
+                                                <h3>Палетка для контуринга CONTOUR PALETTE оттенок 001 UNIVERSAL</h3>
+                                                <div class="details">
+                                                    <div><strong>Кол-во:</strong><span>1</span></div>
+                                                    <div><strong>Цена</strong><span>800 ₽</span></div>
+                                                    <div><strong>Сумма</strong><span>800 ₽</span></div>
+                                                </div>
+                                            </div></a>
+                        </div>
+                        <textarea name="comment" placeholder="Комментарий к заказу" rows="1"></textarea>
+                        <div class="total">
+                            <h3>Итого к оплате</h3>
+                            <div class="list">
+                                <div class="row"><span>Сумма заказа</span><span>3 200 ₽</span></div>
+                                <div class="row"><span>Стоимость доставки</span><span>400 ₽</span></div>
+                                <div class="row"><span>Помокод</span><span>-10%</span></div>
+                                <div class="row"><span>Итого</span><span>3 240 ₽</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirm"><span class="note">Нажимая на кнопку, я принимаю условия Публичной оферты и даю согласие на обработку персональных данных</span>
+                        <div class="buttons">
+                            <button class="border" onclick="history.back()"><img src="../../images/back_arrow.svg"><span>Назад</span></button><a class="button">Оплатить</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+section.cdek {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+@media (max-width: 960px) {
+  section.cdek {
+    padding-bottom: 80px;
+  }
+}
+section.cdek div.container {
+  display: grid;
+  grid-gap: 40px;
+}
+section.cdek h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #171614;
+}
+section.cdek div.module {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: #e7e7e7;
+  width: 100%;
+  height: 800px;
+}
+@media (max-width: 960px) {
+  section.cdek div.module {
+    height: 600px;
+  }
+}
+@media (max-width: 640px) {
+  section.cdek div.module {
+    height: 400px;
+  }
+}
+section.cdek div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+section.cdek div.buttons button.border {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border: 1px solid #636363;
+  padding: 20px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #636363;
+}
+section.cdek div.buttons a.button {
+  cursor: pointer;
+  padding: 20px 30px;
+  background: #171614;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e7e7e7;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}/*# sourceMappingURL=post_cdek.css.map */

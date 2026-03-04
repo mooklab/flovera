@@ -1,0 +1,40 @@
+include ../common/pug/_mixins.pug
+
+section.order_delivery
+    div.container
+
+        div.steps.mobile
+            span Шаг 3
+            span.active Адрес получения
+
+        div.steps.desktop
+            a(href="order_personal.html") Личные данные
+            img(src="images/steps_arrow.svg")
+            a(href="order_personal.html") Способ доставки
+            img(src="images/steps_arrow.svg")
+            span.active Адрес получения
+            img(src="images/steps_arrow.svg")
+            span Оплата
+
+        h1 Введите адрес  доставки
+
+        form
+            fieldset.text
+                input(type="text", name="street", placeholder="", required)
+                label Улица
+            div.row
+                fieldset.text
+                    input(type="text", name="house", placeholder="", required)
+                    label Дом
+                fieldset.text
+                    input(type="text", name="building", placeholder="", required)
+                    label Корпус
+                fieldset.text
+                    input(type="text", name="apartment", placeholder="", required)
+                    label Квартира
+
+            div.buttons
+                button(onclick="history.back()").border
+                    img(src="../../images/back_arrow.svg")
+                    span Назад
+                a(href="payment.html").button Далее

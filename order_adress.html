@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height">
+        <meta name="description" content="Описание сайта">
+        <meta name="keywords" content="Ключевые слова">
+        <title>Корзина и Оформление</title>
+        <meta name="robots" content="index, follow">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="date=no">
+        <meta name="format-detection" content="address=no">
+        <meta name="format-detection" content="email=no">
+        <meta name="application-name" content="Корзина и Оформление">
+        <meta name="color-scheme" content="only light">
+        <meta property="og:title" content="Корзина и Оформление">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Описание сайта">
+        <meta property="og:image" content="Изображение">
+        <meta property="og:site_name" content="Корзина и Оформление">
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/order_adress.css">
+        <script defer src="scripts/main.js" type="module"></script>
+    </head>
+    <body>
+        <main>
+            <section class="order_delivery">
+                <div class="container">
+                    <div class="steps mobile"><span>Шаг 3</span><span class="active">Адрес получения</span></div>
+                    <div class="steps desktop"><a href="order_personal.html">Личные данные</a><img src="images/steps_arrow.svg"><a href="order_personal.html">Способ доставки</a><img src="images/steps_arrow.svg"><span class="active">Адрес получения</span><img src="images/steps_arrow.svg"><span>Оплата</span></div>
+                    <h1>Введите адрес  доставки</h1>
+                    <form>
+                        <fieldset class="text">
+                            <input type="text" name="street" placeholder="" required>
+                            <label>Улица</label>
+                        </fieldset>
+                        <div class="row">
+                            <fieldset class="text">
+                                <input type="text" name="house" placeholder="" required>
+                                <label>Дом</label>
+                            </fieldset>
+                            <fieldset class="text">
+                                <input type="text" name="building" placeholder="" required>
+                                <label>Корпус</label>
+                            </fieldset>
+                            <fieldset class="text">
+                                <input type="text" name="apartment" placeholder="" required>
+                                <label>Квартира</label>
+                            </fieldset>
+                        </div>
+                        <div class="buttons">
+                            <button class="border" onclick="history.back()"><img src="../../images/back_arrow.svg"><span>Назад</span></button><a class="button" href="payment.html">Далее</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+include ../common/pug/_mixins.pug
+
+section.order_delivery
+    div.container
+
+        div.steps.mobile
+            span Шаг 2
+            span.active Способ доставки
+
+        div.steps.desktop
+            a(href="order_personal.html") Личные данные
+            img(src="images/steps_arrow.svg")
+            span.active Способ доставки
+            img(src="images/steps_arrow.svg")
+            span Адрес получения
+            img(src="images/steps_arrow.svg")
+            span Оплата
+
+        div.note.red При заказе от 3000 ₽, доставка 0 ₽
+
+        h1 Выберите Способ доставки
+
+        form
+            div.row
+                label.radio
+                    input(type="radio", name="delivery", required)
+                    span.name 5POST (в постомат)
+                    span.price 100 ₽
+                label.radio
+                    input(type="radio", name="delivery", required)
+                    span.name CDEK (до пункта выдачи)
+                    span.price 200 ₽
+                label.radio
+                    input(type="radio", name="delivery", required)
+                    span.name CDEK (курьером до двери)
+                    span.price 400 ₽
+
+            div.buttons
+                button(onclick="history.back()").border
+                    img(src="../../images/back_arrow.svg")
+                    span Назад
+                a(href="order_adress.html").button Далее

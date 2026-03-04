@@ -1,0 +1,225 @@
+@use '../common/sass/_colors' as *
+@use '../common/sass/_mixins.sass' as *
+
+section.payment
+    padding-top: 60px
+    padding-bottom: 100px
+    +s(m)
+        padding-bottom: 80px
+
+    div.container
+        display: grid
+        grid-gap: 40px
+
+    h1 
+        font-weight: 500
+        font-size: 32px
+        line-height: 140%
+        text-transform: uppercase
+        color: $color-gray-dark
+
+    h3
+        font-weight: 500
+        font-size: 20px
+        line-height: 140%
+        text-transform: uppercase
+        color: $color-gray-dark
+
+    div.data
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        +s(m)
+            grid-template-columns: 1fr
+
+    div.personal,
+    div.delivery,
+    div.products,
+    div.total
+        display: grid
+        align-content: start
+        grid-gap: 30px
+    div.personal
+        border-right: 1px solid $color-border
+        border-bottom: 1px solid $color-border
+        padding: 0px 40px 40px 0px
+        +s(m)
+            padding: unset
+            border-right: unset
+            padding-bottom: 40px
+    div.delivery
+        border-bottom: 1px solid $color-border
+        padding: 0px 0px 40px 40px
+        +s(m)
+            padding: 40px 0
+    div.products
+        grid-column: 2 span
+        padding: 40px 0
+        +s(m)
+            grid-column: 1 span
+    div.total
+        grid-column: 2 span
+        padding: 40px 0px
+        +s(m)
+            grid-column: 1 span
+        div.list
+            div.row
+                span:first-child
+                    font-weight: 400
+                    color: $color-gray-light
+
+                span:last-child
+                    font-weight: 500
+                    color: $color-gray-dark
+
+    a.product
+        display: grid
+        align-items: start
+        grid-template-columns: max-content 1fr
+        grid-gap: 30px
+        border-right: 1px solid $color-border
+        border-top: 1px solid $color-border
+        +s(s)
+            grid-gap: 20px
+
+        div.image
+            margin-top: -1px
+            width: 120px
+            height: 120px
+            border: 1px solid $color-border
+            +s(s)
+                width: 80px
+                height: 80px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        h3
+            font-weight: 500
+            font-size: 16px
+            line-height: 140%
+            text-transform: uppercase
+            color: $color-gray-dark
+            +s(s)
+                padding-top: 20px
+                padding-right: 20px
+
+        div.about
+            display: grid
+            grid-gap: 10px
+            padding-top: 20px
+            padding-right: 30px
+            +s(s)
+                display: contents
+
+            div.details
+                display: flex
+                flex-wrap: wrap
+                gap: 40px
+                +s(s)
+                    grid-column: 2 span
+                    gap: 20px
+                div
+                    display: flex
+                    gap: 10px
+                    strong
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 140%
+                        color: $color-gray-dark
+                    span
+                        font-weight: 400
+                        font-size: 16px
+                        line-height: 140%
+                        color: $color-gray-light
+
+    textarea
+        grid-column: 2 span
+        padding: 20px
+        border-bottom: 1px solid $color-gray-light
+        width: 100%
+        overflow: hidden
+        resize: none
+        +s(m)
+            grid-column: 1 span
+
+        &::placeholder
+            color: $color-gray-light
+
+    div.list
+        display: grid
+        grid-gap: 20px
+
+        div.row
+            display: grid
+            grid-template-columns: 1fr auto
+            grid-gap: 10px
+            span:first-child
+                display: grid
+                align-items: end
+                grid-template-columns: max-content 1fr
+                grid-gap: 10px
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-dark
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    min-width: 30px
+                    height: 1px
+                    background: $color-border
+
+            span:last-child
+                font-weight: 400
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-light
+                text-align: right
+
+            &:has(div.quantity)
+                span:first-child::after
+                    display: none
+
+    div.confirm
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 40px
+        +s(m)
+            flex-direction: column
+        span.note
+            max-width: 480px
+
+        div.buttons
+            display: flex
+            gap: 10px
+            +s(m)
+                width: 100%
+            
+            button.border
+                cursor: pointer
+                display: flex
+                align-items: center
+                gap: 10px
+                border: 1px solid $color-gray-light
+                padding: 20px 30px
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-gray-light
+
+            a.button
+                cursor: pointer
+                padding: 20px 30px
+                background: $color-gray-dark
+                font-weight: 500
+                font-size: 16px
+                line-height: 140%
+                color: $color-border
+                width: 100%
+                min-width: 480px
+                text-align: center
+                +s(m)
+                    min-width: unset

@@ -1,0 +1,15 @@
+extends ../components/common/pug/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/index.css")
+
+block content
+    section.pages
+        div.container
+            a(href="cart.html") Корзина
+            a(href="order_personal.html") Личные даннные
+            a(href="order_delivery.html") Способ доставки
+            a(href="post_fivepost.html") ПВЗ 5POST
+            a(href="post_cdek.html") ПВЗ CDEK
+            a(href="order_adress.html") Адрес получения
+            a(href="payment.html") Оплата

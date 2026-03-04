@@ -1,0 +1,38 @@
+include ../common/pug/_mixins.pug
+
+section.order_personal
+    div.container
+
+        div.steps.mobile
+            span Шаг 1
+            span.active Личные данные
+
+        div.steps.desktop
+            span.active Личные данные
+            img(src="images/steps_arrow.svg")
+            span Способ доставки
+            img(src="images/steps_arrow.svg")
+            span Адрес получения
+            img(src="images/steps_arrow.svg")
+            span Оплата
+
+        h1 Личные данные
+
+        form
+            fieldset.text
+                input(type="text", name="name", placeholder="", required)
+                label ФИО
+            fieldset.text
+                input(type="text", name="phone", placeholder="", required)
+                label Телефон
+            fieldset.text
+                input(type="text", name="email", placeholder="", required)
+                label Email
+
+            +select('city', 'Город', 'Москва', 'Санкт-Петербург', 'Волгоград', 'Воронеж', 'Екатеринбург', 'Казань', 'Краснодар', 'Красноярск', 'Нижний Новгород', 'Новосибирск', 'Омск', 'Пермь', 'Ростов-на-Дону', 'Самара', 'Уфа', 'Челябинск')
+
+            div.buttons
+                button(onclick="history.back()").border
+                    img(src="../../images/back_arrow.svg")
+                    span Назад
+                a(href="order_delivery.html").button Далее

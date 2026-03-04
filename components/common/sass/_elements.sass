@@ -1,0 +1,123 @@
+@use '_colors' as *
+@use '_mixins' as *
+    
+fieldset.select
+    user-select: none
+    position: relative
+    z-index: 3
+    &:hover
+        z-index: 5
+
+    div.select_choice
+        cursor: pointer
+        border-bottom: 1px solid $color-gray-light
+
+        input
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            pointer-events: none
+            background: transparent
+
+        input.placeholder + span
+            opacity: 0.7
+
+        span
+            display: none
+            padding: 20px
+
+        input:checked + span
+            display: grid
+            align-items: center
+            align-content: center
+
+    &:focus
+        z-index: 5
+    
+        div.select_dropdown
+            grid-template-rows: 1fr
+            border: 1px solid $color-gray-light
+
+        img.arrow, svg
+            transform: rotate(180deg)
+            top: calc(50% - 3px)
+
+    div.select_dropdown
+        position: absolute
+        top: 100%
+        margin-top: -1px
+        display: grid
+        grid-template-rows: 0fr
+        transition: all 0.5s
+        height: max-content
+        width: 100%
+        z-index: 6
+        border: 0px solid transparent
+
+        div.select_dropdown_overflow
+            overflow: hidden
+
+        div.select_dropdown_content
+            display: grid
+            grid-gap: 10px
+            background: white
+            max-height: 240px
+            overflow: auto
+            padding: 20px 0
+            border-radius: 4px
+
+            &::-webkit-scrollbar
+                width: 3px
+                height: 100%
+
+            &::-webkit-scrollbar-thumb
+                background: $color-gray-light
+
+        label
+            cursor: pointer
+            padding: 5px 20px
+            &:hover
+                opacity: 0.7
+
+    img.arrow, svg
+        position: absolute
+        top: calc(50% - 2px)
+        right: 0
+        transition: all 0.3s
+
+div.steps
+    display: flex
+    align-items: center
+    gap: 40px
+
+    a
+        color: $color-gray-dark
+
+    span
+        opacity: 0.3
+        & + img
+            opacity: 0.3
+
+        &.active
+            opacity: 1
+
+    &.desktop
+        display: flex
+        +s(m)
+            display: none
+
+    &.mobile
+        display: none
+        gap: 20px
+        +s(m)
+            display: flex
+
+
+
+
+
+
+
+

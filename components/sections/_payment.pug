@@ -1,0 +1,92 @@
+include ../common/pug/_mixins.pug
+
+mixin product(image, title)
+    a(href="").product
+        div.image
+            img(src=image, alt=title) 
+        div.about
+            h3= title
+            div.details
+                div
+                    strong Кол-во:
+                    span 1
+                div
+                    strong Цена
+                    span 800 ₽
+                div
+                    strong Сумма
+                    span 800 ₽
+
+section.payment
+    div.container
+
+        div.steps.mobile
+            span Шаг 4
+            span.active Оплата
+
+        div.steps.desktop
+            a(href="order_personal.html") Личные данные
+            img(src="images/steps_arrow.svg")
+            a(href="order_personal.html") Способ доставки
+            img(src="images/steps_arrow.svg")
+            a(href="order_personal.html") Адрес получения
+            img(src="images/steps_arrow.svg")
+            span.active Оплата
+
+        h1 Оплата
+
+        div.data
+            div.personal
+                h3 Данные пользователя
+                div.list
+                    div.row
+                        span ФИО
+                        span Иванова Евгения Михайловна
+                    div.row
+                        span Телефон
+                        span 8 999 210 27 37
+                    div.row
+                        span Email
+                        span ivanova.evgeniya@gmail.com
+
+            div.delivery
+                h3 Данные доставки
+                div.list
+                    div.row
+                        span Служба доставки
+                        span СДЭК (курьером)
+                    div.row
+                        span Адрес
+                        span Москва, ул. Строителей, д. 12/1, кв. 158
+
+            div.products
+                h3 Товары в заказе
+                +product('images/1.webp', 'Мицеллярная вода CLEANSING WATER')
+                +product('images/2.webp', 'Палетка теней EYE SHADOW QUAD 03 Nude Dip OPEN*STAGE')
+                +product('images/3.webp', 'Палетка для контуринга CONTOUR PALETTE оттенок 001 UNIVERSAL')
+
+            textarea(name="comment", placeholder="Комментарий к заказу", rows="1")
+
+            div.total
+                h3 Итого к оплате
+                div.list
+                    div.row
+                        span Сумма заказа
+                        span 3 200 ₽
+                    div.row
+                        span Стоимость доставки
+                        span 400 ₽
+                    div.row
+                        span Помокод
+                        span -10%
+                    div.row
+                        span Итого
+                        span 3 240 ₽
+
+        div.confirm
+            span.note Нажимая на кнопку, я принимаю условия Публичной оферты и даю согласие на обработку персональных данных
+            div.buttons
+                button(onclick="history.back()").border
+                    img(src="../../images/back_arrow.svg")
+                    span Назад
+                a.button Оплатить

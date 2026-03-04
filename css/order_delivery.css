@@ -1,0 +1,129 @@
+section.order_delivery {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+@media (max-width: 960px) {
+  section.order_delivery {
+    padding-bottom: 80px;
+  }
+}
+section.order_delivery div.container {
+  display: grid;
+  grid-gap: 40px;
+}
+section.order_delivery h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #171614;
+}
+section.order_delivery div.note {
+  border: 1px solid #e7e7e7;
+  padding: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ff383c;
+}
+section.order_delivery form {
+  display: grid;
+  grid-gap: 20px;
+}
+section.order_delivery form div.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+@media (max-width: 1280px) {
+  section.order_delivery form div.row {
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 960px) {
+  section.order_delivery form div.row {
+    grid-template-columns: 1fr;
+  }
+}
+section.order_delivery form label.radio {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 10px;
+  border: 1px solid #e7e7e7;
+  padding: 30px;
+  height: 180px;
+}
+@media (max-width: 960px) {
+  section.order_delivery form label.radio {
+    padding: 20px;
+    height: 140px;
+  }
+}
+section.order_delivery form label.radio input {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid #636363;
+  background: white;
+  pointer-events: none;
+}
+section.order_delivery form label.radio:has(input:checked) {
+  background: #171614;
+}
+section.order_delivery form label.radio:has(input:checked) span.name, section.order_delivery form label.radio:has(input:checked) span.price {
+  color: white;
+}
+section.order_delivery form label.radio span.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #171614;
+}
+section.order_delivery form label.radio span.price {
+  color: #636363;
+  padding-left: 20px;
+}
+section.order_delivery form div.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+section.order_delivery form div.buttons button.border {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  border: 1px solid #636363;
+  padding: 20px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #636363;
+}
+section.order_delivery form div.buttons a.button {
+  cursor: pointer;
+  padding: 20px 30px;
+  background: #171614;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e7e7e7;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+section.order_delivery form:invalid div.buttons a.button {
+  pointer-events: none;
+  background: #e7e7e7;
+  color: #636363;
+  opacity: 0.5;
+}/*# sourceMappingURL=order_delivery.css.map */
