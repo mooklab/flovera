@@ -1,0 +1,48 @@
+section.success div.container {
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 20px;
+  min-height: 65vh;
+}
+section.success div.container img {
+  width: 64px;
+  height: 64px;
+}
+section.success div.container h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #171614;
+}
+section.success div.container p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+section.success div.container p b {
+  font-weight: 700;
+}
+section.success div.container a.button {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+  padding: 20px 30px;
+  background: #171614;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e7e7e7;
+  margin-top: 40px;
+}
+@media (max-width: 960px) {
+  section.success div.container a.button {
+    min-width: unset;
+    width: 100%;
+  }
+}/*# sourceMappingURL=order_success.css.map */

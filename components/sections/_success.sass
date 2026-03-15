@@ -1,0 +1,41 @@
+@use '../common/sass/_colors' as *
+@use '../common/sass/_mixins' as *
+
+section.success 
+    div.container
+        display: grid
+        text-align: center
+        justify-items: center
+        align-content: center
+        grid-gap: 20px
+        min-height: 65vh
+
+        img
+            width: 64px
+            height: 64px
+        h1
+            font-weight: 500
+            font-size: 32px
+            line-height: 140%
+            text-transform: uppercase
+            color: $color-gray-dark
+        p
+            font-weight: 500
+            font-size: 16px
+            line-height: 140%
+            b
+                font-weight: 700
+        a.button
+            display: block
+            width: max-content
+            cursor: pointer
+            padding: 20px 30px
+            background: $color-gray-dark
+            font-weight: 500
+            font-size: 16px
+            line-height: 140%
+            color: $color-border
+            margin-top: 40px
+            +s(m)
+                min-width: unset
+                width: 100%
