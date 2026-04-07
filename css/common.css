@@ -247,22 +247,26 @@ fieldset.select div.select_dropdown {
 }
 fieldset.select div.select_dropdown div.select_dropdown_overflow {
   overflow: hidden;
+  height: 100%;
+  max-height: 240px;
 }
 fieldset.select div.select_dropdown div.select_dropdown_content {
   display: grid;
   grid-gap: 10px;
   background: white;
+  height: 100%;
   max-height: 240px;
   overflow: auto;
   padding: 20px 0;
   border-radius: 4px;
 }
 fieldset.select div.select_dropdown div.select_dropdown_content::-webkit-scrollbar {
-  width: 3px;
+  width: 20px;
   height: 100%;
 }
 fieldset.select div.select_dropdown div.select_dropdown_content::-webkit-scrollbar-thumb {
-  background: #636363;
+  cursor: pointer;
+  background: linear-gradient(to right, #fff 0px, #fff 18px, #636363 10px, #636363 20px);
 }
 fieldset.select div.select_dropdown label {
   cursor: pointer;

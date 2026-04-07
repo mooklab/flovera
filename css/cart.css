@@ -279,6 +279,7 @@ section.cart div.total div.price span:first-child {
   color: #636363;
 }
 section.cart div.total div.price span:last-child {
+  min-width: 140px;
   font-weight: 500;
   font-size: 25px;
   line-height: 140%;
@@ -389,6 +390,43 @@ section.recommendations div.swiper {
 }
 section.recommendations div.swiper.show {
   display: block;
+}
+section.recommendations div.swiper-scrollbar {
+  position: relative;
+  background: transparent !important;
+  height: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+section.recommendations div.swiper-scrollbar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: #E7E7E7;
+  z-index: -1;
+}
+section.recommendations div.swiper-scrollbar div.swiper-scrollbar-drag {
+  display: block;
+  position: relative;
+  background: transparent !important;
+  left: 0px;
+  cursor: pointer;
+}
+section.recommendations div.swiper-scrollbar div.swiper-scrollbar-drag::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: #171614;
+  z-index: 1;
 }
 section.recommendations a.product {
   display: grid;

@@ -58,22 +58,26 @@ fieldset.select
 
         div.select_dropdown_overflow
             overflow: hidden
+            height: 100%
+            max-height: 240px
 
         div.select_dropdown_content
             display: grid
             grid-gap: 10px
             background: white
+            height: 100%
             max-height: 240px
             overflow: auto
             padding: 20px 0
             border-radius: 4px
 
             &::-webkit-scrollbar
-                width: 3px
+                width: 20px
                 height: 100%
 
             &::-webkit-scrollbar-thumb
-                background: $color-gray-light
+                cursor: pointer
+                background: linear-gradient(to right, #fff 0px,#fff 18px, $color-gray-light 10px,  $color-gray-light 20px)
 
         label
             cursor: pointer

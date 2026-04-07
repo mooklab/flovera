@@ -13,6 +13,10 @@ const paymentComment = document.querySelector('section.payment textarea')
 new Swiper(swiperRecommendations, {
     slidesPerView: 2,
     spaceBetween: 20,
+    scrollbar: {
+        el: swiperRecommendations.nextElementSibling,
+        draggable: true,
+    },
     breakpoints: {
         640: {
             slidesPerView: 3,
