@@ -18,7 +18,7 @@ section.order_personal
 
         h1 Личные данные
 
-        form
+        form(tabindex="0")
             fieldset.text
                 input(type="text", name="name", placeholder="", required)
                 label ФИО
@@ -29,7 +29,68 @@ section.order_personal
                 input(type="text", name="email", placeholder="", required)
                 label Email
 
-            +select('city', 'Город', 'Москва', 'Санкт-Петербург', 'Волгоград', 'Воронеж', 'Екатеринбург', 'Казань', 'Краснодар', 'Красноярск', 'Нижний Новгород', 'Новосибирск', 'Омск', 'Пермь', 'Ростов-на-Дону', 'Самара', 'Уфа', 'Челябинск')
+            //- +select('city1', 'Город', 'Москва', 'Санкт-Петербург', 'Волгоград', 'Воронеж', 'Екатеринбург', 'Казань', 'Краснодар', 'Красноярск', 'Нижний Новгород', 'Новосибирск', 'Омск', 'Пермь', 'Ростов-на-Дону', 'Самара', 'Уфа', 'Челябинск')
+
+            fieldset(class="city", tabindex="0").select
+                div.select_choice
+                    input(type="radio", id="city_0", name="city", checked).placeholder
+                    span Город
+
+                    input(type="radio", id="city_1", name="city")
+                    span Москва
+                    input(type="radio", id="city_2", name="city")
+                    span Санкт-Петербург
+                    input(type="radio", id="city_3", name="city")
+                    span Волгоград
+                    input(type="radio", id="city_4", name="city")
+                    span Воронеж
+                    input(type="radio", id="city_5", name="city")
+                    span Екатеринбург
+                    input(type="radio", id="city_6", name="city")
+                    span Казань
+                    input(type="radio", id="city_7", name="city")
+                    span Краснодар
+                    input(type="radio", id="city_8", name="city")
+                    span Красноярск
+                    input(type="radio", id="city_9", name="city")
+                    span Нижний Новгород
+                    input(type="radio", id="city_10", name="city")
+                    span Новосибирск
+                    input(type="radio", id="city_11", name="city")
+                    span Новосибирск
+                    input(type="radio", id="city_12", name="city")
+                    span Пермь
+                    input(type="radio", id="city_13", name="city")
+                    span Ростов-на-Дону
+                    input(type="radio", id="city_14", name="city")
+                    span Самара
+                    input(type="radio", id="city_15", name="city")
+                    span Уфа
+                    input(type="radio", id="city_16", name="city")
+                    span Челябинск
+
+                    img(src="images/select_arrow.svg", alt="").arrow
+                div.select_dropdown
+                    div.select_dropdown_overflow
+                        div.select_dropdown_content
+
+                            input(type="text", name="select_sort", placeholder="Поиск").select_sort
+
+                            label(for="city_1") Москва
+                            label(for="city_2") Санкт-Петербург
+                            label(for="city_3") Волгоград
+                            label(for="city_4") Воронеж
+                            label(for="city_5") Екатеринбург
+                            label(for="city_6") Казань
+                            label(for="city_7") Краснодар
+                            label(for="city_8") Красноярск
+                            label(for="city_10") Нижний Новгород
+                            label(for="city_11") Новосибирск
+                            label(for="city_12") Пермь
+                            label(for="city_13") Ростов-на-Дону
+                            label(for="city_14") Самара
+                            label(for="city_15") Уфа
+                            label(for="city_16") Челябинск
 
             div.buttons
                 button(onclick="history.back()").border

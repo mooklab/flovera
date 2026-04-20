@@ -8,13 +8,15 @@ const phoneInputs = document.querySelectorAll('input[type=tel]')
 const quantities = document.querySelectorAll('div.quantity')
 const swiperRecommendations = document.querySelector('section.recommendations div.swiper')
 const paymentComment = document.querySelector('section.payment textarea')
+const select_input = document.querySelector('input.select_sort')
+const select_labels = document.querySelectorAll('fieldset.select label')
 
 
 new Swiper(swiperRecommendations, {
     slidesPerView: 2,
     spaceBetween: 20,
     scrollbar: {
-        el: swiperRecommendations.nextElementSibling,
+        el: swiperRecommendations?.nextElementSibling,
         draggable: true,
     },
     breakpoints: {
@@ -60,4 +62,18 @@ phoneInputs.forEach(phoneInput => {
     })
 })
 
+select_input.addEventListener('input', event => {
+    const labels = select_input.parentNode.querySelectorAll('label')
+    labels.forEach(label => {
+        label.textContent.toLowerCase().includes(select_input.value.toLowerCase()) && select_input.value ? label.classList.add('active') : label.classList.remove('active')
+    })
+})
 
+
+select_labels.forEach( label => {
+    label.addEventListener('click', event => {
+        setTimeout(() => {
+            document.querySelector('form').focus()
+        }, 100)
+    })
+})

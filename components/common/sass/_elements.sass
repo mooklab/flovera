@@ -33,7 +33,7 @@ fieldset.select
             align-items: center
             align-content: center
 
-    &:focus
+    &:focus-within
         z-index: 5
     
         div.select_dropdown
@@ -51,7 +51,6 @@ fieldset.select
         display: grid
         grid-template-rows: 0fr
         transition: all 0.5s
-        // height: max-content
         width: 100%
         z-index: 6
         border: 0px solid transparent
@@ -81,6 +80,20 @@ fieldset.select
             padding: 5px 20px
             &:hover
                 opacity: 0.7
+
+        input
+            width: 100%
+            margin-top: -20px
+            background: rgba(0,0,0,0.05)
+            padding: 15px 20px
+
+        &:has(.active)
+            label
+                display: none
+                &.active
+                    display: block
+
+        
 
     img.arrow, svg
         position: absolute

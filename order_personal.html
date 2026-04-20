@@ -36,7 +36,7 @@
                     <div class="steps mobile"><span>Шаг 1</span><span class="active">Личные данные</span></div>
                     <div class="steps desktop"><span class="active">Личные данные</span><img src="images/steps_arrow.svg"><span>Способ доставки</span><img src="images/steps_arrow.svg"><span>Адрес получения</span><img src="images/steps_arrow.svg"><span>Оплата</span></div>
                     <h1>Личные данные</h1>
-                    <form>
+                    <form tabindex="0">
                         <fieldset class="text">
                             <input type="text" name="name" placeholder="" required>
                             <label>ФИО</label>
@@ -49,49 +49,49 @@
                             <input type="text" name="email" placeholder="" required>
                             <label>Email</label>
                         </fieldset>
-                                    <fieldset class="city select" tabindex="0">
-                                        <div class="select_choice">
-                                            <input class="placeholder" type="radio" id="city" name="city" checked><span>Город</span>
-                                            <input type="radio" id="city_0" name="city"><span>Москва</span>
-                                            <input type="radio" id="city_1" name="city"><span>Санкт-Петербург</span>
-                                            <input type="radio" id="city_2" name="city"><span>Волгоград</span>
-                                            <input type="radio" id="city_3" name="city"><span>Воронеж</span>
-                                            <input type="radio" id="city_4" name="city"><span>Екатеринбург</span>
-                                            <input type="radio" id="city_5" name="city"><span>Казань</span>
-                                            <input type="radio" id="city_6" name="city"><span>Краснодар</span>
-                                            <input type="radio" id="city_7" name="city"><span>Красноярск</span>
-                                            <input type="radio" id="city_8" name="city"><span>Нижний Новгород</span>
-                                            <input type="radio" id="city_9" name="city"><span>Новосибирск</span>
-                                            <input type="radio" id="city_10" name="city"><span>Омск</span>
-                                            <input type="radio" id="city_11" name="city"><span>Пермь</span>
-                                            <input type="radio" id="city_12" name="city"><span>Ростов-на-Дону</span>
-                                            <input type="radio" id="city_13" name="city"><span>Самара</span>
-                                            <input type="radio" id="city_14" name="city"><span>Уфа</span>
-                                            <input type="radio" id="city_15" name="city"><span>Челябинск</span><img class="arrow" src="images/select_arrow.svg" alt="">
-                                        </div>
-                                        <div class="select_dropdown">
-                                            <div class="select_dropdown_overflow">
-                                                <div class="select_dropdown_content">
-                                                    <label for="city_0">Москва</label>
-                                                    <label for="city_1">Санкт-Петербург</label>
-                                                    <label for="city_2">Волгоград</label>
-                                                    <label for="city_3">Воронеж</label>
-                                                    <label for="city_4">Екатеринбург</label>
-                                                    <label for="city_5">Казань</label>
-                                                    <label for="city_6">Краснодар</label>
-                                                    <label for="city_7">Красноярск</label>
-                                                    <label for="city_8">Нижний Новгород</label>
-                                                    <label for="city_9">Новосибирск</label>
-                                                    <label for="city_10">Омск</label>
-                                                    <label for="city_11">Пермь</label>
-                                                    <label for="city_12">Ростов-на-Дону</label>
-                                                    <label for="city_13">Самара</label>
-                                                    <label for="city_14">Уфа</label>
-                                                    <label for="city_15">Челябинск</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
+                        <fieldset class="city select" tabindex="0">
+                            <div class="select_choice">
+                                <input class="placeholder" type="radio" id="city_0" name="city" checked><span>Город</span>
+                                <input type="radio" id="city_1" name="city"><span>Москва</span>
+                                <input type="radio" id="city_2" name="city"><span>Санкт-Петербург</span>
+                                <input type="radio" id="city_3" name="city"><span>Волгоград</span>
+                                <input type="radio" id="city_4" name="city"><span>Воронеж</span>
+                                <input type="radio" id="city_5" name="city"><span>Екатеринбург</span>
+                                <input type="radio" id="city_6" name="city"><span>Казань</span>
+                                <input type="radio" id="city_7" name="city"><span>Краснодар</span>
+                                <input type="radio" id="city_8" name="city"><span>Красноярск</span>
+                                <input type="radio" id="city_9" name="city"><span>Нижний Новгород</span>
+                                <input type="radio" id="city_10" name="city"><span>Новосибирск</span>
+                                <input type="radio" id="city_11" name="city"><span>Новосибирск</span>
+                                <input type="radio" id="city_12" name="city"><span>Пермь</span>
+                                <input type="radio" id="city_13" name="city"><span>Ростов-на-Дону</span>
+                                <input type="radio" id="city_14" name="city"><span>Самара</span>
+                                <input type="radio" id="city_15" name="city"><span>Уфа</span>
+                                <input type="radio" id="city_16" name="city"><span>Челябинск</span><img class="arrow" src="images/select_arrow.svg" alt="">
+                            </div>
+                            <div class="select_dropdown">
+                                <div class="select_dropdown_overflow">
+                                    <div class="select_dropdown_content">
+                                        <input class="select_sort" type="text" name="select_sort" placeholder="Поиск">
+                                        <label for="city_1">Москва</label>
+                                        <label for="city_2">Санкт-Петербург</label>
+                                        <label for="city_3">Волгоград</label>
+                                        <label for="city_4">Воронеж</label>
+                                        <label for="city_5">Екатеринбург</label>
+                                        <label for="city_6">Казань</label>
+                                        <label for="city_7">Краснодар</label>
+                                        <label for="city_8">Красноярск</label>
+                                        <label for="city_10">Нижний Новгород</label>
+                                        <label for="city_11">Новосибирск</label>
+                                        <label for="city_12">Пермь</label>
+                                        <label for="city_13">Ростов-на-Дону</label>
+                                        <label for="city_14">Самара</label>
+                                        <label for="city_15">Уфа</label>
+                                        <label for="city_16">Челябинск</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
                         <div class="buttons">
                             <button class="border" onclick="history.back()"><img src="images/back_arrow.svg"><span>Назад</span></button><a class="button" href="order_delivery.html">Далее</a>
                         </div>

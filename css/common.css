@@ -217,14 +217,14 @@ fieldset.select div.select_choice input:checked + span {
   -ms-flex-line-pack: center;
       align-content: center;
 }
-fieldset.select:focus {
+fieldset.select:focus-within {
   z-index: 5;
 }
-fieldset.select:focus div.select_dropdown {
+fieldset.select:focus-within div.select_dropdown {
   grid-template-rows: 1fr;
   border: 1px solid #636363;
 }
-fieldset.select:focus img.arrow, fieldset.select:focus svg {
+fieldset.select:focus-within img.arrow, fieldset.select:focus-within svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -268,6 +268,18 @@ fieldset.select div.select_dropdown label {
 }
 fieldset.select div.select_dropdown label:hover {
   opacity: 0.7;
+}
+fieldset.select div.select_dropdown input {
+  width: 100%;
+  margin-top: -20px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+}
+fieldset.select div.select_dropdown:has(.active) label {
+  display: none;
+}
+fieldset.select div.select_dropdown:has(.active) label.active {
+  display: block;
 }
 fieldset.select img.arrow, fieldset.select svg {
   position: absolute;
